@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdDeleteSweep } from 'react-icons/md';
+//import { MdDeleteSweep } from 'react-icons/md';
 
 const TaskItem = ({ task, deleteTask }) => {
   const { taskName, difficulty } = task;
@@ -17,7 +17,7 @@ const TaskItem = ({ task, deleteTask }) => {
         Dificuldade: {difficulty}
       </div>
       </div>
-      <MdDeleteSweep className="delete-icon" onClick={handleDeleteTask} />
+      <button className="delete-icon" onClick={handleDeleteTask} />
     </li>
   );
 };
