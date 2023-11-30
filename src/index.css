@@ -145,6 +145,7 @@ input[type='checkbox'] {
 
 .items-text-difficulty{
   font-size: smaller;
+
 }
 
 
@@ -161,11 +162,27 @@ input[type='checkbox'] {
   border-radius: 50%;
   padding: 5px;
   display: block;
+  margin-left: auto;
 }
 .delete-icon:hover {
   background: rgb(161, 160, 160);
   transition: 0.3s;
 }
+
+.edit-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 27px !important;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  display: block;
+}
+.edit-icon:hover {
+  background: rgb(161, 160, 160);
+  transition: 0.3s;
+}
+
 
 .isChecked {
   text-decoration: line-through;

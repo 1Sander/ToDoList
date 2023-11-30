@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const TaskInput = ({ addTask }) => {
   const [task, setTask] = useState('');
@@ -7,14 +8,18 @@ const TaskInput = ({ addTask }) => {
   function handleInputValue(event) {
     setTask(event.target.value);
   }
-
-  function handleAddTask(event) {
-    event.preventDefault();
+  const handleAddTask = () => {
     if (task.trim() === '') return;
-    addTask(task, difficulty); 
+    const newTask = {
+      id: uuidv4(), 
+      taskName: task,
+      difficulty: difficulty,
+      checked: false 
+    };
+    addTask(newTask);
     setTask('');
     setDifficulty(1);
-  }
+  };
   
   function handleDifficultyValue(event) {
     const value = parseInt(event.target.value);
